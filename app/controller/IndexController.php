@@ -14,5 +14,9 @@ class IndexController{
 	public function index(){
 		Vortice::setVar('area', 'Selecione uma Opção');
 		Vortice::setVar('desc', '');
+    if(post && p("semestre")) {
+      Turma::getSemestrePadrao();
+      redirect(new Link(p("url")));
+    }
 	}
 }

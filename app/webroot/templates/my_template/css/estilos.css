@@ -2,6 +2,7 @@
 
 /* Elementos */
 
+
 body {
 	font-family: verdana;
 	font-size: 12px;
@@ -11,10 +12,44 @@ body {
 a { text-decoration: none; color: #1E4785; }
 a:hover { text-decoration: underline; color: #e80; }
 
+div {
+  float: left;
+}
+
+fieldset div label {
+	display: inline;
+}
+
+#menu {
+  width: 200px;
+}
+
+#topo {
+  width:770px;
+}
+
+#rodape {
+	text-align: center;
+	background-color: #eee;
+	padding: 10px;
+	border-top: 1px solid #aaa;
+	margin-top: 5px;
+  width:100%;  
+}
+
+#geral {
+  float:none;
+	width: 970px;
+	margin: 0 auto 0px auto;
+}
 
 #conteiner {
 	width: 770px;
 	margin: 0 auto 5px auto;
+}
+
+#conteudo {
+  width:100%;
 }
 
 h1 {
@@ -33,6 +68,21 @@ h2 {
 h3 {
 	margin: 10px 0;
 	font-size: 14px;
+}
+
+#menu-principal {
+	display: block;
+}
+
+#menu-principal li {
+	display: block;
+	margin-left: 5px;
+  margin-top:  5px;
+  padding: 2px;
+}
+
+#menu-principal li:hover { 
+	background-color: #E1EFF6;
 }
 
 .submenu {
@@ -56,6 +106,12 @@ fieldset textarea {
 
 fieldset p {
 	padding: 5px 0;
+}
+
+select {
+  font-color: #000000; 
+  color: #000000; 
+  background-color: #FFFFFF;
 }
 
 fieldset p input, fieldset p textarea {
@@ -93,9 +149,32 @@ table tr th {
 	padding: 3px;
 }
 
+table caption {
+  font-size: 140%;
+	font-weight: bold;
+	text-align: center;
+	padding: 3px;
+}
+
+table thead th {
+	background-color: #E1EFF6;
+}
+
+table tfoot td {
+  font-size: 70%;
+	text-align: center;
+	padding: 3px;
+  background-color: #E1EFF6;
+}
+
 table tr.hover td {
 	background-color: #E1EFF6;
 }
+
+#alternaterow td {
+	background-color: #E1EFF6;
+}
+
 
 table tr td, table tr th {
 	padding: 3px;
@@ -107,6 +186,15 @@ table tr td, table tr th {
 	float: right;
 	margin-top: 5px;
 }
+
+
+ul {
+ list-style-type: circle;
+}
+
+/*li {
+  display: block;
+}*/
 
 #lang li {
 	display: inline;
@@ -142,14 +230,6 @@ table tr td, table tr th {
 	list-style: circle inside;
 	padding-left: 20px;
 	line-height: 17px;
-}
-
-#rodape {
-	text-align: center;
-	background-color: #eee;
-	padding: 10px;
-	border-top: 1px solid #aaa;
-	margin-top: 5px;
 }
 
 .hide {

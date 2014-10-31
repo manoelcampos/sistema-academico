@@ -11,9 +11,6 @@
  */
 ?>
 <h2>{{Página Inicial}}</h2>
-<ul id="menu-principal">
-	<li><a class="lnk1" href="<?php echo new Link("orgao") ?>" title="{{Exemplo}}">{{Exemplo}}</a></li>
-</ul>
 <?php 
 	new Snippet('info');
 ?>

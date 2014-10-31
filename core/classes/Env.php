@@ -3,7 +3,7 @@
 class Env {
 	private static $vars;
 
-	public function setup(){
+	public static function setup(){
 		self::$vars = &$_SERVER;
 		
 		$tmproot = str_replace('\\', '/', dirname($_SERVER['SCRIPT_FILENAME']) . '/');
@@ -46,11 +46,11 @@ class Env {
 		Env::set('production', production);
 	}
 	
-	public function set($index, $val){
+	public static function set($index, $val){
 		self::$vars[$index] = $val;
 	}
 	
-	public function &get($index){
+	public static function &get($index){
 		return self::$vars[$index];
 	}
 	

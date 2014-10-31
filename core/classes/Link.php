@@ -12,7 +12,6 @@
  * @author	Carlos André Ferrari <carlos@ferrari.eti.br>
  */
 class Link{
-
 	/**
 	* Temporary link encoded
 	*
@@ -100,7 +99,7 @@ class Link{
 	* @return	string
 	* @static
 	*/
-	private function replacePars($page, $pars=''){
+	private static function replacePars($page, $pars=''){
 		$uri = preg_replace("@\/+@", "/", virtualroot . ((request_lang != default_lang) ? request_lang : "") . "/$page/");
 
 		if ($pars==='') return $uri;
@@ -122,7 +121,9 @@ class Link{
 	* @static
 	*/
 	static function createLink($page='', $pars=''){
-		if (!preg_match("/^([a-z\-]+\+)?([a-z\-]+)(:[a-z\-]+)?$/", $page))
+		//if (!preg_match("/^([a-z\-]+\+)?([a-z\-]+)(:[a-z\-]+)?$/", $page))
+    //Adicionado suporte a links para páginas (views) com _ (só era permitido usar -)
+    if (!preg_match("/^([_a-z\-]+\+)?([_a-z\-]+)(:[_a-z\-]+)?$/", $page))
 			return self::replacePars($page, $pars);
 		$page = preg_split("/[:\+]/", $page);
 
@@ -165,6 +166,7 @@ class Link{
 		$q = $_SERVER['REQUEST_URI'];
 		
 		if (virtualroot !== '/') $q = preg_replace('/^'.addcslashes(virtualroot, '/').'/', '', $q);
+		list ($q) = explode('?', $q);
 		$q = preg_replace('@^\/|\/$@', '', $q);
 		$tmp = explode('/', $q);
 		if ($tmp[0] !== ''){

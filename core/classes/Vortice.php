@@ -207,6 +207,7 @@ class Vortice{
 	public static function setAction($action){
 		self::$action = $action;
 	}
+		
 	
 	/**
 	* get the requested view

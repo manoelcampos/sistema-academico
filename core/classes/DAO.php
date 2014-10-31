@@ -20,6 +20,16 @@ class DAO
 	* @access		private
 	*/
 	private static $rs = array();
+		
+
+    /***Retorna o nome da tabela referente à classe atual
+    * @return Retorna uma string que representa o nome da tabela.
+    */
+    public static function getTableName() {
+      $tableName = str_replace("DAO", "", get_called_class());
+      $tableName = uncamelize($tableName);
+      return $tableName; 
+    }	
 	
 	/**
 	* Return a recordset if exists
@@ -27,7 +37,7 @@ class DAO
 	* @param	string	$index	Recordset nickname
 	* @return	array
 	*/
-	public function get($index='default')
+	public static function getRecordset($index='default')
 	{
 		return (isset(self::$rs[$index]))? self::$rs[$index] : NULL; 
 	}
@@ -37,7 +47,7 @@ class DAO
 	*
 	* @return	array
 	*/
-	public function &getAll(){
+	public static function &getAll(){
 		return self::$rs;
 	}
 	
@@ -47,7 +57,7 @@ class DAO
 	* @param	string	$index	Recordset nickname
 	* @return	array
 	*/
-	public function &add($rs, $index='default')
+	public static function &add($rs, $index='default')
 	{
 		self::$rs[$index] = $rs;
 		return $rs;

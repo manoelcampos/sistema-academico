@@ -42,7 +42,7 @@ class Route{
 	*/
 	public static function exec(){
 		foreach (self::$routes as $r){
-			if (preg_match($r['er'], uri, $match)){
+			if (preg_match($r['er'], $tmp_uri, $match)){
 				$p = $r['pars'];
 				for ($x=1; $x<count($match); $x++) $p = str_replace('%' . $x, $match[$x], $p);
 				$p = preg_replace('@%[0-9]+@', '', $p);				
@@ -56,11 +56,13 @@ class Route{
 		}
 		define ('routed', false);
 
+		/*
 		if (!ajax && !post && !preg_match('@\/$@', $_SERVER['REQUEST_URI'])){
 			header ('HTTP/1.1 301 Moved Permanently');
 			header ('Location: ' . uri . '/');
 			exit();
 		}
+		*/
 
 		return false;
 	}

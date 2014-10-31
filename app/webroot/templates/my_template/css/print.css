@@ -1,1 +1,69 @@
 @charset "utf-8";
+
+.submenu, #tbDefaultFields, #rodape, #menu, fieldset, input[type=button], input[type=submit] {
+  display: none;
+}
+
+.noprint {
+  display:none;
+}
+
+body {
+	font-family: verdana;
+	font-size: 8pt;
+	color: #333;
+}
+
+form, fieldset {
+  page-break-before: avoid;
+  page-break-after:  avoid;
+}
+
+input {
+  border: 0px none #FFFFFF;
+  color: #000000;
+  background: transparent;
+}
+
+select {
+  font-color: #000000; 
+  color: #000000; 
+  border:  0px none; 
+  background-color: #FFFFFF;
+}
+
+table {
+  page-break-before: avoid;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table tr th {
+	font-weight: bold;
+	text-align: left;
+}
+
+table caption {
+	font-weight: bold;
+	text-align: center;
+}
+
+table thead th {
+	background-color: #E1EFF6;
+}
+
+table tfoot td {
+	text-align: center;
+  background-color: #E1EFF6;
+}
+
+table tr.hover td {
+	background-color: #E1EFF6;
+}
+
+table tr td, table tr th {
+	border-bottom: 1px solid #efefef;
+	vertical-align: middle;
+}

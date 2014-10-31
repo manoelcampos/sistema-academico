@@ -35,6 +35,17 @@ class Controller {
 	*/
 	public function __get($met){
 		if (isset($this->$met)) return $this->$met;
-		return DAO::get("$met");	
+		return DAO::getRecordset("$met");	
+	}
+	
+	/***Retorna o nome da classe do model referente ao controller 
+	* atual.
+	* Por exemplo, se o controller é UsuarioController,
+	* retorn a classe model Usuario
+	*/
+	public static function getModelClass() {
+	  $className = get_called_class(); //poderia usar controller?
+	  $className = str_replace("Controller", "", $className);
+	  return $className;
 	}
 }

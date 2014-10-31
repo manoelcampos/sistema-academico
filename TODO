@@ -1,0 +1,11 @@
+alterar a view vwAlunoTurma
+para que a coluna disciplinas_curso
+seja baseada no cadastro de disciplinas
+e nao nas disciplinas do aluno
+pois alguns alunos nao 
+possuem registro (por falha no diário)
+em tal tabela.
+
+a ficha de conselho também é afetada
+com este problema, assim como o histórico,
+exibindo notas na coluna errada (disciplina errada)

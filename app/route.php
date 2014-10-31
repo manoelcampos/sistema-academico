@@ -11,3 +11,5 @@
  
 //Route::add("teste/(.*)/([0-9]+)$", "news:show", "nome=%1&id=%2");
 //Route::add("^login$", "user:login");
+//Route::add("^resultado$", "aluno-turma-disciplina");
+//Route::add("^notas$", "aluno-turma-disciplina-avaliacao");
