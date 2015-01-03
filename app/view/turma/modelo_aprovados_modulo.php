@@ -37,11 +37,15 @@ function mudouDeModulo($total_disciplinas_modulo, $numColDisciplina) {
             return false;
         }            
         
-        var id_aluno = document.getElementById("id_aluno");
-        if(id_aluno.value === "") {
+        /*var field = document.getElementsByName("id_aluno_curso");
+        var selecionados = 0;
+        for(var i = 0; i < field.length; i++){
+            (field[i].checked ? selecionados++ : "");
+        }
+        if(selecionados === 0) {
             window.alert("Selecione algum aluno");
             return false;
-        }            
+        }*/            
 
         if(window.confirm("Tem certeza que deseja registrar a data para os alunos selecionados?")) {
             document.getElementById("alterar_data_colacao").value = "1";
@@ -139,8 +143,9 @@ function mudouDeModulo($total_disciplinas_modulo, $numColDisciplina) {
                 $j++;
                 $separador = mudouDeModulo($total_disciplinas_modulo, $j);
                 $cor = "";
-                if($nota->id_conceito==2 || $nota->media_final == 0.0) //reprovado
+                if($nota->id_conceito==2 || $nota->media_final == 0.0): //reprovado
                    $cor = "color: red; ";
+                endif;
             ?>
                 <td style="text-align: right; <?php echo $cor . $separador;?>">
                     <?php echo $nota->media_final?>
@@ -176,5 +181,5 @@ function mudouDeModulo($total_disciplinas_modulo, $numColDisciplina) {
         </div>
     </fieldset>
     <?php endif;?>
-</form>
+    </form>
 
