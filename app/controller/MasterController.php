@@ -50,7 +50,8 @@ class MasterController{
 
 		$isDevMode = (!isset($_SERVER['HTTP_HOST']) || $_SERVER['HTTP_HOST'] == 'localhost');
 		//Database::getInstance()->init("10.211.55.2", "academicoeaduser", "DEXLyzcjbLZLSfqn", "academicoead");
-		Database::getInstance()->init("10.211.55.2", "root", "root", "academicoead");
+		//Database::getInstance()->init("10.211.55.2", "root", "root", "academicoead");
+		Database::getInstance()->init("127.0.0.1", "root", "root", "academicoead");
 		// if you want to conect in another Database...
 		//Database::getInstance('another_one')->init("database2_ip", "database2_user", "database2_pass", "database2_name", BD_PGSQL);
 		Post::autoRender();

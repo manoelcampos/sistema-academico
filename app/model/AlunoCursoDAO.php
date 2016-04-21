@@ -8,8 +8,9 @@
 class AlunoCursoDAO extends DAO {
     public static function getAprovados($turmas) {
         $id_turmas = "-1";
-        foreach($turmas as $t)
+        foreach($turmas as $t):
             $id_turmas .= ", $t->id";
+        endforeach;
         
         $sql = "SELECT ac.id as id_aluno_curso, at.id_aluno, a.nome as aluno, 
         a.matricula, concat(a.nome, ' / ', coalesce(a.matricula, '')) as aluno_matricula,
@@ -44,11 +45,13 @@ class AlunoCursoDAO extends DAO {
                  inner join curso c on c.id = ac.id_curso
                  inner join polo p on p.id = ac.id_polo
                  where 1=1 ";
-         if($id_curso != "" && $id_curso != 0)
+         if($id_curso != "" && $id_curso != 0):
             $sql .= " and ac.id_curso = $id_curso ";
+         endif;
 
-         if($id_polo != "" && $id_polo != 0)
+         if($id_polo != "" && $id_polo != 0):
             $sql .= " and ac.id_polo = $id_polo ";
+         endif;
 
          if($busca_por_matricula_ou_cpf) 
             $sql .= " and (a.matricula = '$matricula_ou_cpf' or a.cpf = '$matricula_ou_cpf') ";
@@ -70,11 +73,13 @@ class AlunoCursoDAO extends DAO {
                 left outer join cidade c on c.id = ac.id_cidade_curso_anterior 
                 left outer join estado e on e.id = c.id_estado 
                 where ac.id = $id_aluno_curso ";
-         if($id_curso != "" && $id_curso != 0)
+         if($id_curso != "" && $id_curso != 0):
             $sql .= " and ac.id_curso = $id_curso ";
+         endif;
 
-         if($id_polo != "" && $id_polo != 0)
+         if($id_polo != "" && $id_polo != 0):
             $sql .= " and ac.id_polo = $id_polo ";
+         endif;
 
          //echo $sql;
         return Database::getInstance()->queryOne($sql);
@@ -82,9 +87,9 @@ class AlunoCursoDAO extends DAO {
     
     public static function registrarDataColacaoGrau($ids_aluno_curso, $id_curso, $id_polo, $data) {
         $ids_str = "-1";
-        foreach ($ids_aluno_curso as $id) {
+        foreach ($ids_aluno_curso as $id) :
             $ids_str .= ", $id";
-        }
+        endforeach;
         $sql = "update aluno_curso set data_colacao_grau = '$data' 
                 where id in ($ids_str)
                 and id_curso = $id_curso and id_polo = $id_polo";

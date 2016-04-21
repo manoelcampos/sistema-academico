@@ -2,3 +2,4 @@ nbproject
 app/logs/*
 *~
 *.zip
+*.bak

@@ -324,18 +324,18 @@ class TurmaController extends Controller{
         $this->cursos = Curso::all();
         $this->conceito = Conceito::get(1);
         $erros = array();
-        if(post) {  
+        if(post) :
             if (intval(p("salvar")) > 0) {
                 $this->salvarHistoricos($erros);
             } else if (p("alterar_data_colacao") != "") {
                 $this->registrarDataColacaoGrau($erros);
             }
             $this->exibirListaAprovados($erros);
-        }
+        endif;
 
-        if (count($erros)) {
+        if (count($erros)) :
             Post::error("Ocorreram os seguintes erros:", $erros);
-        }
+        endif;
     }
     
     public function reprovados(){
@@ -346,10 +346,11 @@ class TurmaController extends Controller{
         if(post) {  
            $caption = "Alunos Reprovados";
 
-           if(p("id_curso") > 0)
+           if(p("id_curso") > 0):
                  $this->modulos = 
                     ModuloCurso::getBySemestre(
                            Turma::getSemestrePadrao(), p("id_curso"));
+           endif;
 
            if(p("id_modulo") > 0) {
                  $orderby_disciplina = "sigla";
@@ -380,8 +381,9 @@ class TurmaController extends Controller{
            }
         }
     
-        if(count($erros))
+        if(count($erros)):
           Post::error("Ocorreram os seguintes erros:", $erros);
+        endif;
     }
     
     private function registrarDataColacaoGrau(&$erros) {
@@ -390,10 +392,10 @@ class TurmaController extends Controller{
             return;
         }    
         $ids_aluno_curso = p("id_aluno_curso");
-        if($ids_aluno_curso=="" || count($ids_aluno_curso)==0) {
+        if($ids_aluno_curso=="" || count($ids_aluno_curso)==0) :
             $erros[]="Selecione algum aluno.";
             return;
-        }    
+        endif;
         
         AlunoCurso::registrarDataColacaoGrau($ids_aluno_curso, p("id_curso"), p("id_polo"), p("data_colacao_grau"));
     }

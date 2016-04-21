@@ -1,1 +1,5 @@
-        RewriteRule (.*) index.php [L]
+#Apache 2.2.x
+#RewriteRule "(.*)" "index.php" [L]
+
+#Apache 2.4.x
+RewriteRule "(.*)" "core.php" [L]
