@@ -6,6 +6,8 @@ class UsuarioController extends Controller{
   * Cada propriedade do controller setada é
   * disponibilizada como uma variável global 
   * (com o mesmo nome) para as views.
+  * @package AcademicoEad
+  * @subpackage Controller
   */
   private function loadTables() {
     /*O método all um método 

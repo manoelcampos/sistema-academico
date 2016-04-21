@@ -1,4 +1,9 @@
 <?php
+
+/**
+ * @package AcademicoEad
+ * @subpackage model
+*/
 class UsuarioDAO extends DAO{
 	public static function getByMatricula($matricula){
 	  //Como o usuário pode ter um login de professor e um de funcionário,

@@ -1,10 +1,8 @@
 <?php
 /**
- * Sample of a framework data object
- * @package SampleApp
- * @subpackage Model
- * @subpackage DTO
- */
+ * @package AcademicoEad
+ * @subpackage model
+*/
 class Polo extends DTO{
 	/**
 	* Contruct a Exemplo object

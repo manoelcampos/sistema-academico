@@ -5,8 +5,8 @@
  */
  
 /**
-* Application routes
-* @package SampleApp
+ * Application routes
+ * @package AcademicoEad
 */
  
 //Route::add("teste/(.*)/([0-9]+)$", "news:show", "nome=%1&id=%2");

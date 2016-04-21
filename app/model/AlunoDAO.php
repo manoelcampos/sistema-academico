@@ -1,10 +1,8 @@
 <?php
 /**
- * Sample of a framework data access object
- * @package SampleApp
- * @subpackage Model
- * @subpackage DTO
- */
+ * @package AcademicoEad
+ * @subpackage model
+*/
 class AlunoDAO extends DAO {
 	
 	/**

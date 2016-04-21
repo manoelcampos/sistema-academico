@@ -4,9 +4,12 @@
 //Usuários comuns só tem acesso à esta página do model Usuario
 define("LINK_ALTERAR_USUARIO", "usuario/alterar/id:".Session::get("u")->id."/");
 
-/***Classe que realiza o controle de acesso às páginas (view)
-* de acordo com o tipo do usuário logado.
-* Aqui são registradas as páginas que cada tipo de usuário pode acessar.
+/**
+ * Classe que realiza o controle de acesso às páginas (view)
+ * de acordo com o tipo do usuário logado.
+ * Aqui são registradas as páginas que cada tipo de usuário pode acessar.
+ * @package AcademicoEad
+ * @subpackage model
 */
 class AccessControl{
   //As páginas que não tem um nome de chave (que representa o título da página)

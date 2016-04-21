@@ -1,6 +1,6 @@
 <?php
 
-/** sClasse cujos objetos são utilizados em campos
+/** Classe cujos objetos são utilizados em campos
 * que possuem apenas as opções Sim e Não. 
 * O uso de uma classe para tais opções
 * é feito para facilitar a criação
@@ -9,8 +9,8 @@
 * escrever código HTML para
 * incluir, por exemplo, um select com
 * estas opções.
-* @package SistemaReservas
-* @subpackage Model
+* @package AcademicoEad
+* @subpackage model
 */
 class SimNao extends DTO {
   /** Construtor padrão da classe

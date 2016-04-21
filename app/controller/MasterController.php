@@ -1,7 +1,7 @@
 <?php
 /**
- * Sample of a framework template controller
- * @package SampleApp
+ * 
+ * @package AcademicoEad
  * @subpackage Controller
  */
 class MasterController{

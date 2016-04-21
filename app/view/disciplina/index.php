@@ -1,15 +1,4 @@
-<?php
-/* 
- * Copyright (c) 2008, Carlos André Ferrari <[carlos@]ferrari.eti.br>; Luan Almeida <[luan@]luan.eti.br>
- * All rights reserved. 
- */
- 
-/**
- * Sample of a framework view to List Exemplo objects
- * @package SampleApp
- * @subpackage View
- */
-?>
+
 <h2>{{Disciplina}}</h2>
 <span class="desc"><!--desc--></span>
 <fieldset>

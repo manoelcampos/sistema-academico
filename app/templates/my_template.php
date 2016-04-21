@@ -5,8 +5,8 @@
  */
  
  /**
- * Application template sample
- * @package SampleApp
+ * Application template
+ * @package AcademicoEad
  * @subpackage Template
  */
 

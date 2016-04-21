@@ -1,10 +1,8 @@
 <?php
 /**
- * Sample of a framework data access object
- * @package SampleApp
- * @subpackage Model
- * @subpackage DTO
- */
+ * @package AcademicoEad
+ * @subpackage model
+*/
 class AlunoCursoDAO extends DAO {
     public static function getAprovados($turmas) {
         $id_turmas = "-1";

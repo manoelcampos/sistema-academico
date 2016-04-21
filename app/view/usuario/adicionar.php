@@ -1,8 +1,8 @@
 <?php
  
 /** View utilizada para adicionar ou alterar um registro de usuário
-* @package SistemaReservas
-* @subpackage View
+ * @package AcademicoEad
+ * @subpackage View
 */
 ?>
 

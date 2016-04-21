@@ -1,10 +1,8 @@
 <?php
 /**
- * Sample of a framework data access object
- * @package SampleApp
- * @subpackage Model
- * @subpackage DTO
- */
+ * @package AcademicoEad
+ * @subpackage model
+*/
 class DisciplinaDAO extends DAO {
   const ORDERBY = " order by c.descricao, m.ordem, d.descricao "; 
   const SELECT =

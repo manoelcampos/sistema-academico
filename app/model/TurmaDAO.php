@@ -1,10 +1,9 @@
 <?php
+
 /**
- * Sample of a framework data access object
- * @package SampleApp
- * @subpackage Model
- * @subpackage DTO
- */
+ * @package AcademicoEad
+ * @subpackage model
+*/
 class TurmaDAO extends DAO {
     const ORDERBY = " order by c.descricao, m.ordem, p.descricao ";
     const SQL_SEMESTRES = "select distinct semestre from turma order by semestre desc";

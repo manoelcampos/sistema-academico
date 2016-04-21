@@ -2,6 +2,10 @@
 //???? Era pra fazer o require automaticamente
 require(root."app/model/Polo.php");
 
+/**
+ * @package AcademicoEad
+ * @subpackage Controller
+*/
 class TurmaController extends Controller{
 
     private $key;

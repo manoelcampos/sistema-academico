@@ -1,9 +1,8 @@
 <?php
 /**
  * Notas de um aluno para um determinada disciplina
- * @package SampleApp
- * @subpackage Model
- * @subpackage DTO
+ * @package AcademicoEad
+ * @subpackage model
  */
 class AlunoTurmaDisciplinaDAO extends DAO {
 	

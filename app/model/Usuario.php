@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @package AcademicoEad
+ * @subpackage model
+*/
 class Usuario extends DTO{
 	public function __construct($id=0, $nome='', $email='', $senha='', $ativo = 1){
 		if (isset($this->id)) return; // PDO BUG			

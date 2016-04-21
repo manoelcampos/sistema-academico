@@ -1,5 +1,8 @@
+/vendor/
+*.lock
 nbproject
 app/logs/*
 *~
 *.zip
 *.bak
+/docs/phpdoc/

@@ -1,8 +1,8 @@
 <?php
 /** View utilizada para exibir a lista de usuários e
-* permitir chamar as views de inclusão e edição.
-* @package SistemaReservas
-* @subpackage View
+ * permitir chamar as views de inclusão e edição.
+ * @package AcademicoEad
+ * @subpackage View
 */
 ?>
 <h2>{{Usuários}}</h2>

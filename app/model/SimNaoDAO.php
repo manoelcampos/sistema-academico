@@ -1,8 +1,8 @@
 <?php
 /** Classe no padrão de projeto DAO (Data Access Objects)
-* que obtém objetos da classe SimNao a partir do banco de dados
-* @package SistemaReservas
-* @subpackage DAO
+ * que obtém objetos da classe SimNao a partir do banco de dados
+ * @package AcademicoEad
+ * @subpackage model
 */
 class SimNaoDAO extends DAO {
 	public static function all(){

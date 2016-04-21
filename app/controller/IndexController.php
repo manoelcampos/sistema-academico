@@ -1,7 +1,6 @@
 <?php
 /**
- * Sample of a framework controller /index or just /
- * @package SampleApp
+ * @package AcademicoEad
  * @subpackage Controller
  */
 class IndexController{

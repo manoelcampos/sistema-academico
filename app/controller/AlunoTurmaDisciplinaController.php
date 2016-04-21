@@ -1,7 +1,7 @@
 <?php
 /**
  * Sample framework controller
- * @package SampleApp
+ * @package AcademicoEad
  * @subpackage Controller
  */
 class AlunoTurmaDisciplinaController extends Controller{
